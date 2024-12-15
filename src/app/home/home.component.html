@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>{{title}}</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+  <div id="main-image">
+    <img #mainImageElement [src]="mainImage" alt="Main Image" (mouseenter)="changeText()" (mouseleave)="resetText()"
+      class="reading-cursor" (click)="toggleContent()">
+  </div>
+
+  <div id="content" [ngClass]="{'visible': isContentVisible, 'hidden': !isContentVisible}">
+    <h1>About Myself</h1>
+    <span><button aria-label="Close" (click)="toggleContent()">&times;</button></span>
+    <h4>Hello Everyone...!</h4><br>
+    <p>My Name is SAM RAJ.B, I am from Koyembedu, Chennai. I have completed my Schooling at Government Higher Sceondary
+      School (GHSS), Seenapuram, Perundurai, And recently I am completed My Bachelor's Degree in a Department of
+      Artificial Intelligence and Data Science at Excel Engineering College, Namakkal. Now I am recently completed an
+      Full Stack Developer Course under Accord Info Matrix in Chennai. Now, I am actively seeking a job opportunity
+      where I can deploy my skills and contribute effectively. I am eager to leverage my expertise and grow within a
+      dynamic and innovative organization. That's
+      all about me...!</p>
+  </div>
+
+  <div class="typewriter" [ngClass]="{'visible': !isContentVisible, 'hidden': isContentVisible}">
+    <p [style.width]="textWidth" [style.left]="textLeft" [style.letterSpacing]="letterSpacing" [class]="animationClass">
+      {{paragraphText}}</p>
+  </div>
+
+  <a routerLink="/Education" id="top-left" (mouseenter)="changeImage('assets/All Images/left-top.png')"
+    (mouseleave)="resetImage()" [ngClass]="{'visible': !isContentVisible, 'hidden': isContentVisible}">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    Education
+  </a>
+
+  <a routerLink="/Skills" id="top-right" (mouseenter)="changeImage('assets/All Images/right-top.png')"
+    (mouseleave)="resetImage()" [ngClass]="{'visible': !isContentVisible, 'hidden': isContentVisible}">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    Skills
+  </a>
+
+  <a routerLink="/Contact-Me" id="bottom-left" (mouseenter)="changeImage('assets/All Images/left-down.png')"
+    (mouseleave)="resetImage()" [ngClass]="{'visible': !isContentVisible, 'hidden': isContentVisible}">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    Contact Me
+  </a>
+
+  <a routerLink="/MyWorks" id="bottom-right" (mouseenter)="changeImage('assets/All Images/right-down.png')"
+    (mouseleave)="resetImage()" [ngClass]="{'visible': !isContentVisible, 'hidden': isContentVisible}">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    My Works
+  </a>
+</body>
+
+</html>

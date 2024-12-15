@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+#top-left {
+    width: 164.48px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+a {
+    height: 30px;
+    color: white;
+    font-weight: 300;
+    font-size: 25px;
+    font-variant: small-caps;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+}
+
+a:hover {
+    animation: boxShadowDelay 3s forwards;
+}
+
+@keyframes boxShadowDelay {
+    0% {
+        box-shadow: none;
+    }
+
+    100% {
+        box-shadow: 0 0 10px white, 0 0 50px #40A4FF;
+    }
+}
+
+a span {
+    position: absolute;
+    display: block;
+}
+
+a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #40A4FF);
+}
+
+a:hover span:nth-child(1) {
+    left: 100%;
+    transition: 1s;
+}
+
+a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #40A4FF);
+}
+
+a:hover span:nth-child(3) {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #40A4FF);
+}
+
+a:hover span:nth-child(2) {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #40A4FF);
+}
+
+a:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+
+#outer {
+    height: 570px;
+    width: 1290px;
+    margin-left: 120px;
+    margin-right: 120px;
+    margin-top: 103px;
+    margin-bottom: 103px;
+    display: grid;
+    grid-template-rows: 30%, 30%, 30%;
+    gap: 7.5px;
+}
+
+#outer>#one,
+#outer>#two,
+#outer>#three {
+    height: 185px;
+    width: 33%;
+    border-radius: 20px;
+    border: 1px solid white;
+    position: relative;
+}
+
+#outer>#one {
+    animation: easeInAnimationOne 2s forwards;
+}
+
+#outer>#two {
+    margin-left: 35%;
+    animation: easeInAnimationTwo 2s forwards;
+}
+
+#outer>#three {
+    margin-left: 70%;
+    animation: easeInAnimationThree 2s forwards;
+}
+
+#outer>div>h2 {
+    color: white;
+    text-align: center;
+    padding-top: 5px;
+    font-variant: small-caps;
+    text-decoration: underline;
+    text-decoration-color: #40A4FF;
+    letter-spacing: 1px;
+}
+
+#outer>div>p {
+    color: white;
+    text-align: left;
+    padding-top: 5px;
+    padding-left: 35px;
+    font-size: 17px;
+    font-variant: small-caps;
+    transition: opacity 0.4s ease-in-out;
+    opacity: 0;
+}
+
+#outer>div>p.show {
+    opacity: 1;
+}
+
+.container {
+    width: calc(100% - 70px);
+    background-color: hsl(0, 0%, 0%);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    border: white 1px solid;
+    position: absolute;
+    margin-left: 35px;
+    bottom: 20px;
+}
+
+.progress-bar {
+    width: 0;
+    height: 30px;
+    background-color: #40A4FF;
+    text-align: center;
+    line-height: 30px;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    transition: width 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+
+
+.hidden {
+    visibility: hidden;
+}
+
+@keyframes easeInAnimationOne {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes easeInAnimationTwo {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes easeInAnimationThree {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#one:hover,
+#two:hover,
+#three:hover {
+    box-shadow: 0 0 10px white, 0 0 50px #40A4FF;
+    transition: box-shadow 0.5s ease-in-out;
+}

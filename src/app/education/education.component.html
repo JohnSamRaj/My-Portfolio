@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>{{title}}</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+  <a routerLink="/Home" id="top-left">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    Home
+  </a>
+
+  <div id="outer">
+    <div id="one" (mouseover)="isHoveredOne = true" (mouseout)="isHoveredOne = false">
+      <h2>Under Graduation</h2>
+      <br>
+      <p [class.show]="isHoveredOne">Excel Enineering College, Namakkal,</p>
+      <p [class.show]="isHoveredOne">B.Tech - Artificial Intelligence And Data Science,</p>
+      <p [class.show]="isHoveredOne">2020 - 2024</p>
+      <div class="container" [ngClass]="{'hidden': !isHoveredOne}">
+        <div class="progress-bar" [style.width]="isHoveredOne ? '80%' : '0'">80%</div>
+      </div>
+    </div>
+    <div id="two" (mouseover)="isHoveredTwo = true" (mouseout)="isHoveredTwo = false">
+      <h2>Higher Secondary</h2>
+      <br>
+      <p [class.show]="isHoveredTwo">Government Higher Secondary School,</p>
+      <p [class.show]="isHoveredTwo">Seenapuram,</p>
+      <p [class.show]="isHoveredTwo">Bio - Maths (2019 - 2020)</p>
+      <div class="container" [ngClass]="{'hidden': !isHoveredTwo}">
+        <div class="progress-bar" [style.width]="isHoveredTwo ? '65%' : '0'">65%</div>
+      </div>
+    </div>
+    <div id="three" (mouseover)="isHoveredThree = true" (mouseout)="isHoveredThree = false">
+      <h2>Senior Secondary</h2>
+      <br>
+      <p [class.show]="isHoveredThree">Government Higher Secondary School,</p>
+      <p [class.show]="isHoveredThree">Seenapuram,</p>
+      <p [class.show]="isHoveredThree">2017 - 2018</p>
+      <div class="container" [ngClass]="{'hidden': !isHoveredThree}">
+        <div class="progress-bar" [style.width]="isHoveredThree ? '78%' : '0'">78%</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

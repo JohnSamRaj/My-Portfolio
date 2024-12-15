@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>{{title}}</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+    <a routerLink="/Home" id="bottom-left">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Home
+    </a>
+
+    <div class="container">
+        <a href="https://www.instagram.com/_john_sam_raj_/" target="_new"><img id="top-left"
+                src="assets/All Images/Instagram.png" title="Instagram" class="reading-cursor"
+                (mouseenter)="instaText()" (mouseleave)="resetText()"></a>
+        <a href="https://github.com/JohnSamRaj" target="_new"><img id="top-right" src="assets/All Images/Git.png"
+                title="Github" class="reading-cursor" (mouseenter)="gitText()" (mouseleave)="resetText()"></a>
+        <a href="https://shorturl.at/SISaB" target="_new"><img id="down-left" src="assets/All Images/GMAIL.png"
+                title="G-Mail" class="reading-cursor" (mouseenter)="mailText()" (mouseleave)="resetText()"></a>
+        <a href="https://www.linkedin.com/in/johnsamraj0301" target="_new"><img id="down-right"
+                src="assets/All Images/LINKED.png" title="Linked In" class="reading-cursor" (mouseenter)="linkText()"
+                (mouseleave)="resetText()"></a>
+    </div>
+
+    <div id="para">
+        <p [innerHTML]="paragraphText"></p>
+    </div>
+
+</body>
+
+</html>

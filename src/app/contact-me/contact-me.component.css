@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+#bottom-left {
+    width: 189.19px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+#bottom-left {
+    height: 30px;
+    color: white;
+    font-weight: 300;
+    font-size: 25px;
+    font-variant: small-caps;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+}
+
+#bottom-left:hover {
+    animation: boxShadowDelay 3s forwards;
+}
+
+@keyframes boxShadowDelay {
+    0% {
+        box-shadow: none;
+    }
+
+    100% {
+        box-shadow: 0 0 10px white, 0 0 50px #40A4FF;
+    }
+}
+
+#bottom-left span {
+    position: absolute;
+    display: block;
+}
+
+#bottom-left span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #40A4FF);
+}
+
+#bottom-left:hover span:nth-child(1) {
+    left: 100%;
+    transition: 1s;
+}
+
+#bottom-left span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #40A4FF);
+}
+
+#bottom-left:hover span:nth-child(3) {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+#bottom-left span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #40A4FF);
+}
+
+#bottom-left:hover span:nth-child(2) {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+#bottom-left span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #40A4FF);
+}
+
+#bottom-left:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+
+.container>a>img {
+    opacity: 0;
+    height: 100px;
+    width: 100px;
+}
+
+.container>a>img:hover {
+    opacity: 1;
+    transition: opacity 1.5s ease-in;
+    animation: boxShadowDelayimg 0.8s forwards;
+}
+
+@keyframes boxShadowDelayimg {
+    0% {
+        box-shadow: none;
+    }
+
+    100% {
+        filter: drop-shadow(0 0 30px #40A4FF);
+    }
+}
+
+.reading-cursor {
+    cursor: pointer;
+}
+
+#top-left {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+}
+
+#top-right {
+    position: absolute;
+    top: 15%;
+    right: 15%;
+}
+
+#down-left {
+    position: absolute;
+    bottom: 15%;
+    left: 15%;
+}
+
+#down-right {
+    position: absolute;
+    bottom: 15%;
+    right: 15%;
+}
+
+#para {
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: "Pacifico", cursive;
+    line-height: 35px;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    text-transform: capitalize;
+    position: absolute;
+    font-size: 20px;
+    font-weight: bolder;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
