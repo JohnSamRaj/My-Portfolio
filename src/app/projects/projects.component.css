@@ -111,33 +111,6 @@ body {
     overflow: hidden;
 }
 
-/* .marquee1 {
-    position: absolute; 
-    animation: marquee1 3s linear forwards;
-}
-
-@keyframes marquee1 {
-    0% {
-        top: 593px;
-    }
-    100% {
-        top: 100px; 
-    }
-}
-
-.marquee2{
-    position: absolute; 
-    animation: marquee2 3s linear forwards;
-}
-
-@keyframes marquee2 {
-    0% {
-        top: 593px;
-    }
-    100% {
-        top: 228.px; 
-    }} */
-
 details {
     color: white;
     padding: 50px 100px 0px 100px;
@@ -172,4 +145,12 @@ p {
     font-variant: small-caps;
     text-align: center;
     padding-top: 50px;
+}
+
+a{
+    color: white;
+}
+
+a:hover{
+    color:#40A4FF;
 }
